@@ -5,7 +5,8 @@
         "squizlabs/php_codesniffer": ">=1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "3.7.*",
+        "squizlabs/php_codesniffer": "1.4.*"
     },
     "license": "MIT",
     "authors": [

@@ -1,7 +1,4 @@
 <?php
-if (!class_exists('PHP_CodeSniffer_CLI')) {
-    require_once 'PHP/CodeSniffer/CLI.php';
-}
 
 class TestHelper {
 
@@ -14,7 +11,7 @@ class TestHelper {
     public function __construct() {
         $this->_rootDir = dirname(dirname(__FILE__));
         $this->_dirName = basename($this->_rootDir);
-        $this->_phpcs = new PHP_CodeSniffer_CLI();
+        $this->_phpcs = new \PHP_CodeSniffer_CLI();
     }
 
     /**
