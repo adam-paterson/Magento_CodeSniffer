@@ -1,4 +1,4 @@
 Magento_CodeSniffer
 ===================
 
-[![Build Status](https://travis-ci.org/adam-paterson/magento_codesniffer.png?branch=master)(http://travis-ci.org/adam-paterson/magento_codesniffer)
+[![Build Status](https://api.travis-ci.org/adam-paterson/Magento_CodeSniffer.png?branch=master)](http://travis-ci.org/adam-paterson/Magento_CodeSniffer)
