@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Magento">
+    <description>Magento coding standards</description>
+    <rule ref="Magento.Performance.ModelLoad">
+
+    </rule>
+</ruleset>

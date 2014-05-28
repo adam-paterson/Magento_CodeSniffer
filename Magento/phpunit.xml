@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<phpunit colors="true"
+         bootstrap="./tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="phpcs">
+            <file>./tests/MagentoStandardTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
