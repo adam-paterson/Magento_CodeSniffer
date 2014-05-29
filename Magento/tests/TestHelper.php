@@ -1,17 +1,21 @@
 <?php
 
-class TestHelper {
+namespace MagentoStandardTest;
 
-    protected $_rootDir;
+class TestHelper
+{
 
-    protected $_dirName;
+    protected $rootDir;
 
-    protected $_phpcs;
+    protected $dirName;
 
-    public function __construct() {
-        $this->_rootDir = dirname(dirname(__FILE__));
-        $this->_dirName = basename($this->_rootDir);
-        $this->_phpcs = new \PHP_CodeSniffer_CLI();
+    protected $phpcs;
+
+    public function __construct()
+    {
+        $this->rootDir = dirname(dirname(__FILE__));
+        $this->dirName = basename($this->rootDir);
+        $this->phpcs = new \PHP_CodeSniffer_CLI();
     }
 
     /**
@@ -20,9 +24,10 @@ class TestHelper {
      * @param string $file to run.
      * @return string The output from phpcs.
      */
-    public function runPhpCs($file) {
-        $options = $this->_phpcs->getDefaults();
-        $standard = $this->_rootDir . '/ruleset.xml';
+    public function runPhpCs($file)
+    {
+        $options = $this->phpcs->getDefaults();
+        $standard = $this->rootDir . '/ruleset.xml';
         if (
             defined('PHP_CodeSniffer::VERSION') &&
             version_compare(PHP_CodeSniffer::VERSION, '1.5.0') != -1
@@ -37,15 +42,14 @@ class TestHelper {
 
         // New PHPCS has a strange issue where the method arguments
         // are not stored on the instance causing weird errors.
-        $reflection = new ReflectionProperty($this->_phpcs, 'values');
+        $reflection = new ReflectionProperty($this->phpcs, 'values');
         $reflection->setAccessible(true);
-        $reflection->setValue($this->_phpcs, $options);
+        $reflection->setValue($this->phpcs, $options);
 
         ob_start();
-        $this->_phpcs->process($options);
+        $this->phpcs->process($options);
         $result = ob_get_contents();
         ob_end_clean();
         return $result;
     }
-
 }

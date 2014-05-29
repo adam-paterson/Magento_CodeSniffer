@@ -1,10 +1,15 @@
 <?php
+
+namespace MagentoStandardTest;
+
 /**
  * MagentoStandardTest
  */
-class MagentoStandardTest extends PHPUnit_Framework_TestCase {
+class MagentoStandardTest extends PHPUnit_Framework_TestCase
+{
 
-    public function setUp() {
+    public function setUp()
+    {
         parent::setUp();
         if (empty($this->helper)) {
             $this->helper = new TestHelper();
@@ -16,7 +21,8 @@ class MagentoStandardTest extends PHPUnit_Framework_TestCase {
      *
      * Run simple syntax checks, if the filename ends with pass.php - expect it to pass
      */
-    public static function testProvider() {
+    public static function testProvider()
+    {
         $tests = array();
 
         $standard = dirname(dirname(__FILE__));
@@ -47,7 +53,8 @@ class MagentoStandardTest extends PHPUnit_Framework_TestCase {
      * @param string $standard
      * @param boolean $expectPass
      */
-    public function testFile($file, $standard, $expectPass) {
+    public function testFile($file, $standard, $expectPass)
+    {
         $outputStr = $this->helper->runPhpCs($file);
         if ($expectPass) {
             $this->assertNotRegExp(
@@ -63,5 +70,4 @@ class MagentoStandardTest extends PHPUnit_Framework_TestCase {
             );
         }
     }
-
 }
