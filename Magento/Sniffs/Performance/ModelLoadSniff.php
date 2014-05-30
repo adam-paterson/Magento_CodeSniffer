@@ -1,13 +1,14 @@
 <?php
 
+namespace Magento\Sniffs\Performance;
+
 /**
+ * Class ModelLoadSniff
  * Check for model instantiation in template files.
- * Class Magento_Sniffs_Performance_ModelLoadSniff
+ *
  * @author Adam Paterson <adam@wearejh.com>
  */
-// @codingStandardsIgnoreStart
-class Magento_Sniffs_Performance_ModelLoadSniff implements PHP_CodeSniffer_Sniff
-// @codingStandardsIgnoreEnd
+class ModelLoadSniff implements PHP_CodeSniffer_Sniff
 {
     /**
      * Methods to check against.
