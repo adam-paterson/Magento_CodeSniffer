@@ -1,6 +1,5 @@
 <?php
 
-namespace MagentoStandardTest;
 
 class TestHelper
 {

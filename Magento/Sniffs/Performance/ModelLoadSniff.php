@@ -5,7 +5,9 @@
  * Class Magento_Sniffs_Performance_ModelLoadSniff
  * @author Adam Paterson <adam@wearejh.com>
  */
+// @codingStandardsIgnoreStart
 class Magento_Sniffs_Performance_ModelLoadSniff implements PHP_CodeSniffer_Sniff
+// @codingStandardsIgnoreEnd
 {
     /**
      * Methods to check against.
@@ -44,5 +46,4 @@ class Magento_Sniffs_Performance_ModelLoadSniff implements PHP_CodeSniffer_Sniff
         $data = array(trim($tokens[$model]['content']));
         $phpcsFile->addError($error, $stackPtr, 'Found', $data);
     }
-
 }

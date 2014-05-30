@@ -9,8 +9,7 @@ before_script:
 script:
   - cd Magento
   - ../vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml
-  - ../vendor/bin/phpcs --standard=PSR2 ./Magento/Sniffs/
-  - ../vendor/bin/phpcs --standard=PSR2 ./tests/
+  - ../vendor/bin/phpcs --standard=PSR2 ./Sniffs/
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar

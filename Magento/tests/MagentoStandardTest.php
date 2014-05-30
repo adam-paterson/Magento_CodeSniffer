@@ -1,7 +1,5 @@
 <?php
 
-namespace MagentoStandardTest;
-
 /**
  * MagentoStandardTest
  */
