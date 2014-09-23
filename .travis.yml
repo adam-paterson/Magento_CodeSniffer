@@ -7,13 +7,9 @@ before_script:
   - composer install
 
 script:
-  - cd Magento
-  - ../vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml
-  - ../vendor/bin/phpcs --standard=PSR2 ./Sniffs/
+# - ./vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml
+  - ./vendor/bin/phpcs --standard=PSR2 ./Sniffs/
 
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml
-
-notifications:
-  slack: jh:xaJ2tKSC79yf4ghtcpJugTHH
+#  - wget https://scrutinizer-ci.com/ocular.phar
+#  - php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml
