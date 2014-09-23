@@ -1,6 +1,6 @@
 <?php
 
-namespace Magento\Sniffs\Performance;
+namespace MagentoSniff\Performance;
 
 use PHP_CodeSniffer_Sniff;
 

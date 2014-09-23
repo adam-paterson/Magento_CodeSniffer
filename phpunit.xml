@@ -3,7 +3,7 @@
          bootstrap="./tests/bootstrap.php">
     <testsuites>
         <testsuite name="phpcs">
-            <file>./tests/MagentoStandardTest.php</file>
+            <file>./Tests/MagentoStandardTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

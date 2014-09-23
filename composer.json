@@ -5,8 +5,7 @@
         "squizlabs/php_codesniffer": ">=1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "3.7.*",
-        "squizlabs/php_codesniffer": "1.4.*"
+        "squizlabs/php_codesniffer_tests": "dev-master"
     },
     "license": "MIT",
     "authors": [
@@ -14,5 +13,11 @@
             "name": "Adam Paterson",
             "email": "hello@adampaterson.co.uk"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "MagentoSniff\\": "Sniffs/"
+        }
+    }
+
 }
